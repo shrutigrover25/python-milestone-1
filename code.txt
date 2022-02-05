@@ -1,0 +1,157 @@
+#1
+
+if __name__ == '__main__':
+    print("Hello, World!")
+
+#2
+
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    
+    print(a+b)
+    print(a-b)
+    print(a*b)
+
+#3
+
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    
+    print(a//b)
+    print(a/b)
+#4
+
+def print_full_name(a, b):
+    print("Hello " + a, b + "! You just delved into python.")
+#5
+
+def swap_case(s):
+    num = ""
+    for let in s:
+        if let.isupper() == True:
+            num+=(let.lower())
+        else:
+            num+=(let.upper())
+    return num
+
+#6
+if __name__ == '__main__':
+    n = int(input().strip())
+    
+    if n%2==1:
+      print("Weird")
+    elif n%2==0 and n>=2 and n<=5:
+       print("Not Weird")
+    elif n%2==0 and n>=6 and n<=20:
+       print("Weird")
+    elif n%2==0 and n>20:
+       print("Not Weird")
+#7
+
+if __name__ == '__main__':
+    n = int(input())
+    
+    i=0
+    
+    while i<n:
+     print(i*i)
+     i=i+1;
+#8
+
+ef is_leap(year):
+    leap = False
+    
+    # Write your logic here
+    if year%400==0:
+        return True
+    if (year%100==0):
+        return False
+    if  year%4==0:
+        return True
+    else:
+        return False
+    
+        
+    return leap
+
+#9
+
+def solve(s):
+    for x in s[:].split():
+        s = s.replace(x, x.capitalize())
+    return s
+
+
+#10
+
+def count_substring(string, sub_string):
+    count=0
+    for i in range(0, len(string)-len(sub_string)+1):
+        if string[i] == sub_string[0]:
+            flag=1
+            for j in range (0, len(sub_string)):
+                if string[i+j] != sub_string[j]:
+                    flag=0
+                    break
+            if flag==1:
+                count += 1
+    return count
+    
+#11
+
+if __name__ == '__main__':
+    s = input()
+    print(any(map(str.isalnum, s)))
+    print(any(map(str.isalpha, s)))
+    print(any(map(str.isdigit, s)))
+    print(any(map(str.islower, s)))
+    print(any(map(str.isupper, s)))
+#12
+
+def split_and_join(line):
+    # write your code here
+    line = line.split()
+    line = "-".join(line)
+    return line
+
+
+#13
+
+Result =[]
+scorelist = []
+
+if __name__ == '__main__':
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        Result+=[[name,score]]
+        scorelist+=[score]
+    b=sorted(list(set(scorelist)))[1] 
+
+    for a,c in sorted(Result):
+        if c==b:
+            print(a)
+#14
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import math
+a = int(input())
+b = int(input())
+m = int(input())
+c = math.pow(a, b)
+d = c%m
+print(int(c))
+print(int(d))
+
+
+#15
+
+for i in range(0,len(string)+1,max_width):
+        result=string[i:i+max_width]
+        if len(result)==max_width:
+            print(result)
+        else:
+            return(result)
+
